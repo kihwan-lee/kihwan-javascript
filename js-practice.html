@@ -51,15 +51,22 @@ let try01 = makeSquare(3);
 console.log(try01);
 
 //Property vs. Method
-console.log('nameMaker');
 
-function nameMaker(firstName, middleName, lastName) {
-  let fullName = firstName + ' ' + middleName + ' ' + lastName;
-  return fullName
+function makeBetterName(firstName, middleName, lastName) {
+  if (middleName.length === 1) {
+    middleName = middleName + ".";
+    let fullName = firstName + " " + middleName + " " + lastName;
+    return fullName;
+} else {
+    let fullName = firstName + " " + middleName + " " + lastName;
+    return fullName;
+  }
 }
+console.log(makeBetterName("Joan", "Marie", "Larkin"));
+console.log(makeBetterName("Donald", "F", "Trump"));
 
-console.log(nameMaker('John', 'Fitzgerald', 'Kennedy'));
-console.log(nameMaker("Robert", "\"Beto\"", "O'Rourke" ));
+//Flow controls on my own
+
 
 </script>
 </body>
